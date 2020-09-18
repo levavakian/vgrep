@@ -17,5 +17,5 @@ This extension contributes the following settings:
 
 ## Keybindings
 
-Default keybind is set to `cntrl/cmd-shift-\`
+Default keybind is set to `cntrl/cmd-shift-/`
 
