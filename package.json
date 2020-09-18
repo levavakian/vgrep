@@ -2,6 +2,7 @@
 	"name": "vgrep",
 	"displayName": "vgrep",
 	"description": "grep in the command palette",
+	"publisher": "levavakian",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.49.0"
@@ -10,19 +11,36 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vgrep.vgrep",
-		"onCommand:vgrep.vtime"
+		"onCommand:vgrep.vgrep"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": {
+			"title": "VGrep",
+			"properties": {
+				"vgrep.maxBytes": {
+					"type": "number",
+					"default": 10240000,
+					"description": "Maximum number of bytes of stdout to allow for exec of grep"
+				},
+				"vgrep.command": {
+					"type": "string",
+					"default": "grep -nr",
+					"description": "Command to run against search when grepping (this will always run in workspace root)"
+				}
+			},
+			"keybindings": [
+				{
+				  "command": "vgrep.vgrep",
+				  "key": "ctrl+shift+/",
+				  "mac": "cmd+shift+/"
+				}
+			  ]
+		},
 		"commands": [
 			{
 				"command": "vgrep.vgrep",
 				"title": "vgrep"
-			},
-			{
-				"command": "vgrep.vtime",
-				"title": "vtime"
 			}
 		]
 	},
