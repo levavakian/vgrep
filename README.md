@@ -14,3 +14,8 @@ This extension contributes the following settings:
 
 * `vgrep.maxBuffer`: increase if exec command is overflowing its buffer
 * `vgrep.command`: set to alternate commands you would like to run instead of `grep -nr`
+
+## Keybindings
+
+Default keybind is set to `cntrl/cmd-shift-\`
+
