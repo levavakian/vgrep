@@ -3,6 +3,10 @@
 	"displayName": "vgrep",
 	"description": "grep in the command palette",
 	"publisher": "levavakian",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/levavakian/vgrep"
+	},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.49.0"
